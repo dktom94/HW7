@@ -1,13 +1,9 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+   
     <div>
     
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:msci3300_g4ConnectionString %>" DeleteCommand="DELETE FROM [ddkesterHW7_DogBreed] WHERE [BreedID] = @BreedID" InsertCommand="INSERT INTO [ddkesterHW7_DogBreed] ([BreedName], [Size], [Temperament], [Coat], [Classification], [Longevity], [Image]) VALUES (@BreedName, @Size, @Temperament, @Coat, @Classification, @Longevity, @Image)" SelectCommand="SELECT * FROM [ddkesterHW7_DogBreed]" UpdateCommand="UPDATE [ddkesterHW7_DogBreed] SET [BreedName] = @BreedName, [Size] = @Size, [Temperament] = @Temperament, [Coat] = @Coat, [Classification] = @Classification, [Longevity] = @Longevity, [Image] = @Image WHERE [BreedID] = @BreedID">
@@ -42,6 +38,6 @@
                 <asp:HyperLinkField InsertVisible="False" Text="Select" DataNavigateUrlFields="BreedID" DataNavigateUrlFormatString="Default2.aspx?BreedID={0}" />
             </Columns>
         </asp:GridView>
-    </form>
-</body>
-</html>
+
+    </asp:Content>
+
