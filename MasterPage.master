@@ -4,8 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Dog Breed Database</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
     <asp:ContentPlaceHolder id="head" runat="server">
+
+
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -16,7 +21,7 @@
                 <h1>Dog Breed Database</h1>
             </div>
             <div id ="right_header">
-                <img src="./images/dogs.jpg" height ="150 px" />
+                <img src="./dogs.jpg" height ="150px" />
             </div>
         </div>
 
@@ -25,10 +30,12 @@
             <ul id ="nav">
                 <li><a href="./Default.aspx">Home</a></li>
                 <li><a href="./admin/Default.aspx">Admin</a></li>
-                <li><a href="./~dmin/Default3.aspx">Add Breed</a></li>
                  <li><a href="./about.aspx">About Us</a></li>
                 <li><a href="./default4.aspx">Contact Us</a></li>
+                <li><a href="./search.aspx">Search</a></li>
+                <li> <asp:LoginStatus ID="LoginStatus1" runat="server" /></li>
             </ul>
+            
         </div>
 
 
@@ -41,8 +48,9 @@
         
         <div id ="footer">
           <br />
-            <br />
-              &copy 2014 MSCI3300 - Software Design and Devopment 
+           
+             <p> 2014 MSCI3300 - Software Design and Devopment </p>
+            <p> <%= (FormatDateTime(DateTime.Now))%></p> 
         </div>
     </form>
 </body>
