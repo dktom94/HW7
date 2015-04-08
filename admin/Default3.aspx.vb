@@ -7,4 +7,8 @@ Partial Class admin_Default3
         Response.Write("<script>alert('Item Added')</script>")
         Server.Transfer("./Default.aspx")
     End Sub
+
+    Protected Sub DetailsView1_PageIndexChanging(sender As Object, e As DetailsViewPageEventArgs) Handles DetailsView1.PageIndexChanging
+
+    End Sub
 End Class
